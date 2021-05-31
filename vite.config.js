@@ -4,7 +4,8 @@ import path from 'path';
 import legacy from '@vitejs/plugin-legacy';
 import htmlPlugin from './plugins/html-plugin';
 import ViteComponents from 'vite-plugin-components';
-import styleImport from 'vite-plugin-style-import'
+import styleImport from 'vite-plugin-style-import';
+// import eslintPlugin from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
 export default ({ mode }) => defineConfig({
@@ -13,6 +14,7 @@ export default ({ mode }) => defineConfig({
     legacy(),
     htmlPlugin(mode),
     ViteComponents(),
+    // eslintPlugin(),
     styleImport({
       libs: [{
         libraryName: 'element-plus',

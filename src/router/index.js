@@ -5,7 +5,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/LifeCycle',
@@ -13,12 +13,12 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (LifeCycle.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "LifeCycle" */ '@/components/LifeCycle.vue')
-  }
-]
+    component: () => import(/* webpackChunkName: "LifeCycle" */ '@/components/LifeCycle.vue'),
+  },
+];
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 });
 
 export default router;
